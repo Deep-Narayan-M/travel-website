@@ -519,9 +519,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   if (bookNowButton) {
     bookNowButton.addEventListener("click", function () {
-      alert(
-        "Thank you for your interest! Our booking system will be available soon."
-      );
+      window.location.href = "#recommendations";
     });
   }
 
