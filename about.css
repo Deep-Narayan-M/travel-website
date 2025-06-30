@@ -1,0 +1,177 @@
+.about-content {
+  padding: 30px 0;
+}
+
+.company-info {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 30px;
+  border-radius: 8px;
+  margin-bottom: 40px;
+  color: white;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.company-info p {
+  margin-bottom: 20px;
+}
+
+.company-info p:last-child {
+  margin-bottom: 0;
+}
+
+.company-info strong {
+  color: #f8c146;
+}
+
+.team-section {
+  margin-top: 60px;
+}
+
+.team-section h2 {
+  font-size: 3.5rem;
+  color: white;
+  margin-bottom: 40px;
+  font-weight: 700;
+}
+
+.team-members {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.team-member {
+  flex: 1;
+  min-width: 250px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 8px;
+  padding: 25px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  animation: fadeInUp 0.6s ease forwards;
+  opacity: 0;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.team-member:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.member-avatar {
+  width: 80px;
+  height: 80px;
+  background-color: #0a8ea0;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.member-avatar::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    135deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.3) 50%,
+    transparent 100%
+  );
+  top: -100%;
+  left: -100%;
+  transition: all 0.5s ease;
+}
+
+.member-avatar i {
+  font-size: 2rem;
+}
+
+.team-member h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.team-member p {
+  color: #666;
+  margin-bottom: 20px;
+  min-height: 60px;
+}
+
+.role-badge {
+  background-color: #0a8ea0;
+  color: white;
+  padding: 8px 20px;
+  border-radius: 20px;
+  font-weight: bold;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+.team-member:hover .role-badge {
+  background-color: #f8c146;
+  transform: scale(1.05);
+}
+
+/* Override container styles for About page */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
+  margin-top: -100px;
+  position: relative;
+  z-index: 10;
+}
+
+.hero {
+  height: 60vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("images/realistic-travel-background.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+@media (max-width: 768px) {
+  .team-members {
+    flex-direction: column;
+  }
+
+  .team-member {
+    margin-bottom: 20px;
+  }
+
+  .container {
+    margin-top: -50px;
+  }
+
+  .hero {
+    height: 50vh;
+  }
+
+  .company-info {
+    padding: 20px;
+  }
+}
